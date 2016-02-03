@@ -62,10 +62,20 @@ public class login extends JFrame {
 		JButton btnRegistro = new JButton("Registro");
 		btnRegistro.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				register ventana = new register();
+				ventana.setVisible(true);
+				dispose();
 			}
 		});
 		
 		JButton btnEntrar = new JButton("Entrar");
+		btnEntrar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				accessGranted ventana = new accessGranted();
+				ventana.setVisible(true);
+				dispose();
+			}
+		});
 		
 		passField = new JPasswordField();
 		GroupLayout gl_panel = new GroupLayout(panel);
