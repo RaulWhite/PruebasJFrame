@@ -1,0 +1,23 @@
+package chess;
+
+import javax.swing.*;
+
+public class chess {
+
+	public static void main(String[] args) {
+		
+		JFrame chess = new JFrame();
+		chess.setSize(400, 400);
+		chess.setVisible(true);
+
+		
+		for (int i = 1; i<=8; i++){
+			for (int j = 1; j<=8; i++){
+				JButton bij = new JButton();
+				bij.setBounds(i*50, j*50, 50, 50);
+			}
+		}
+		
+	}
+	
+}
