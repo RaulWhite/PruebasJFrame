@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename method &apos;BasicaFuncional.calculo(...)&apos; to &apos;operando&apos;&#x0A;- Original project: &apos;RaulBlancoRama_cal2&apos;&#x0A;- Original element: &apos;BasicaFuncional.calculo(...)&apos;&#x0A;- Renamed element: &apos;BasicaFuncional.operando(...)&apos;&#x0A;- Update references to refactored element" delegate="false" deprecate="false" description="Rename method &apos;calculo&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.method" input="/src&lt;{BasicaFuncional.java[BasicaFuncional~calculo~I" name="operando" references="true" stamp="1456846602660" version="1.0"/>
+</session>

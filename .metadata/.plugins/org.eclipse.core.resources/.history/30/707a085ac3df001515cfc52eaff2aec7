@@ -1,0 +1,339 @@
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.GroupLayout;
+import javax.swing.GroupLayout.Alignment;
+import java.awt.GridLayout;
+import javax.swing.JButton;
+import java.awt.Color;
+import javax.swing.LayoutStyle.ComponentPlacement;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+import java.awt.Font;
+import javax.swing.JLabel;
+import java.awt.Insets;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class BasicaFuncional extends JFrame {
+
+	String num1 = "";
+	String num2 = "";
+	private JPanel contentPane;
+	private JTextField pantalla;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					BasicaFuncional frame = new BasicaFuncional();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+	
+	public void escribir(String numero){
+		if (num2.length() < 9){
+			num2 = num2 + numero;
+		}
+		pantalla.setText(num2);
+	}
+	
+	public void calculo(int operacion){
+		switch (operacion){
+		case 1:
+			/*if (num1.equals("")){
+				num1 = num2;
+			} else {
+				num1 = String.valueOf((Double.parseDouble(num1)) + (Double.parseDouble(num2)));
+			}*/
+			break;
+		case 2:
+			
+			break;
+		case 3:
+			
+			break;
+		case 4:
+			
+			break;
+		}
+		num2 = "";
+		pantalla.setText(num1);
+	}
+	
+	/**
+	 * Create the frame.
+	 */
+	public BasicaFuncional() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 360, 640);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		
+		JPanel panel = new JPanel();
+		
+		JPanel panel_1 = new JPanel();
+		GroupLayout gl_contentPane = new GroupLayout(contentPane);
+		gl_contentPane.setHorizontalGroup(
+			gl_contentPane.createParallelGroup(Alignment.TRAILING)
+				.addGroup(gl_contentPane.createSequentialGroup()
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
+						.addComponent(panel_1, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 350, Short.MAX_VALUE)
+						.addComponent(panel, GroupLayout.DEFAULT_SIZE, 350, Short.MAX_VALUE))
+					.addGap(0))
+		);
+		gl_contentPane.setVerticalGroup(
+			gl_contentPane.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_contentPane.createSequentialGroup()
+					.addComponent(panel_1, GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addComponent(panel, GroupLayout.DEFAULT_SIZE, 449, Short.MAX_VALUE))
+		);
+		panel_1.setLayout(new GridLayout(0, 1, 0, 0));
+		
+		pantalla = new JTextField();
+		pantalla.setEditable(false);
+		pantalla.setFont(new Font("SansSerif", Font.BOLD, 50));
+		pantalla.setHorizontalAlignment(SwingConstants.RIGHT);
+		pantalla.setText("0");
+		panel_1.add(pantalla);
+		pantalla.setColumns(10);
+		
+		JButton btnC = new JButton("C");
+		btnC.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				double num1;
+				num2 = "0";
+				pantalla.setText(num2);
+			}
+		});
+		btnC.setFont(new Font("SansSerif", Font.PLAIN, 34));
+		btnC.setMargin(new Insets(2, 2, 2, 2));
+		btnC.setBackground(new Color(192, 192, 192));
+		
+		JButton btnCe = new JButton("CE");
+		btnCe.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				num2="0";
+				pantalla.setText(num2);
+			}
+		});
+		btnCe.setFont(new Font("SansSerif", Font.PLAIN, 34));
+		btnCe.setMargin(new Insets(2, 2, 2, 2));
+		btnCe.setBackground(new Color(192, 192, 192));
+		
+		JButton buttonPosNeg = new JButton("+/-");
+		buttonPosNeg.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		buttonPosNeg.setFont(new Font("SansSerif", Font.PLAIN, 34));
+		buttonPosNeg.setMargin(new Insets(2, 2, 2, 2));
+		buttonPosNeg.setBackground(new Color(192, 192, 192));
+		
+		JButton button7 = new JButton("7");
+		button7.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				escribir("7");
+			}
+		});
+		button7.setFont(new Font("SansSerif", Font.PLAIN, 34));
+		button7.setMargin(new Insets(2, 2, 2, 2));
+		button7.setBackground(new Color(220, 220, 220));
+		
+		JButton button8 = new JButton("8");
+		button8.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				escribir("8");
+			}
+		});
+		button8.setFont(new Font("SansSerif", Font.PLAIN, 34));
+		button8.setMargin(new Insets(2, 2, 2, 2));
+		button8.setBackground(new Color(220, 220, 220));
+		
+		JButton button9 = new JButton("9");
+		button9.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				escribir("9");
+			}
+		});
+		button9.setFont(new Font("SansSerif", Font.PLAIN, 34));
+		button9.setMargin(new Insets(2, 2, 2, 2));
+		button9.setBackground(new Color(220, 220, 220));
+		
+		JButton btnMul = new JButton("x");
+		btnMul.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				calculo(3);
+			}
+		});
+		btnMul.setFont(new Font("SansSerif", Font.PLAIN, 34));
+		btnMul.setMargin(new Insets(2, 2, 2, 2));
+		btnMul.setBackground(new Color(255, 140, 0));
+		
+		JButton button4 = new JButton("4");
+		button4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				escribir("4");
+			}
+		});
+		button4.setFont(new Font("SansSerif", Font.PLAIN, 34));
+		button4.setMargin(new Insets(2, 2, 2, 2));
+		button4.setBackground(new Color(220, 220, 220));
+		
+		JButton button5 = new JButton("5");
+		button5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				escribir("5");
+			}
+		});
+		button5.setFont(new Font("SansSerif", Font.PLAIN, 34));
+		button5.setMargin(new Insets(2, 2, 2, 2));
+		button5.setBackground(new Color(220, 220, 220));
+		
+		JButton button6 = new JButton("6");
+		button6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				escribir("6");
+			}
+		});
+		button6.setFont(new Font("SansSerif", Font.PLAIN, 34));
+		button6.setMargin(new Insets(2, 2, 2, 2));
+		button6.setBackground(new Color(220, 220, 220));
+		
+		JButton btnRes = new JButton("-");
+		btnRes.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				calculo(2);
+			}
+		});
+		btnRes.setFont(new Font("SansSerif", Font.PLAIN, 34));
+		btnRes.setMargin(new Insets(2, 2, 2, 2));
+		btnRes.setBackground(new Color(255, 140, 0));
+		
+		JButton button1 = new JButton("1");
+		button1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				escribir("1");
+			}
+		});
+		button1.setFont(new Font("SansSerif", Font.PLAIN, 34));
+		button1.setMargin(new Insets(2, 2, 2, 2));
+		button1.setBackground(new Color(220, 220, 220));
+		
+		JButton button2 = new JButton("2");
+		button2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				escribir("2");
+			}
+		});
+		button2.setFont(new Font("SansSerif", Font.PLAIN, 34));
+		button2.setMargin(new Insets(2, 2, 2, 2));
+		button2.setBackground(new Color(220, 220, 220));
+		
+		JButton button3 = new JButton("3");
+		button3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				escribir("3");
+			}
+		});
+		button3.setFont(new Font("SansSerif", Font.PLAIN, 34));
+		button3.setMargin(new Insets(2, 2, 2, 2));
+		button3.setBackground(new Color(220, 220, 220));
+		
+		JButton btnSum = new JButton("+");
+		btnSum.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				calculo(1);
+			}
+		});
+		btnSum.setFont(new Font("SansSerif", Font.PLAIN, 34));
+		btnSum.setMargin(new Insets(2, 2, 2, 2));
+		btnSum.setBackground(new Color(255, 140, 0));
+		
+		JButton btnIgual = new JButton("=");
+		btnIgual.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnIgual.setFont(new Font("SansSerif", Font.PLAIN, 34));
+		btnIgual.setMargin(new Insets(2, 2, 2, 2));
+		btnIgual.setBackground(new Color(255, 140, 0));
+		panel.setLayout(new GridLayout(0, 4, 0, 0));
+		panel.add(btnC);
+		panel.add(btnCe);
+		panel.add(buttonPosNeg);
+		
+		JButton buttonDiv = new JButton("÷");
+		buttonDiv.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				calculo(4);
+			}
+		});
+		buttonDiv.setFont(new Font("SansSerif", Font.PLAIN, 34));
+		buttonDiv.setMargin(new Insets(2, 2, 2, 2));
+		buttonDiv.setBackground(new Color(255, 140, 0));
+		panel.add(buttonDiv);
+		panel.add(button7);
+		panel.add(button8);
+		panel.add(button9);
+		panel.add(btnMul);
+		panel.add(button4);
+		panel.add(button5);
+		panel.add(button6);
+		panel.add(btnRes);
+		panel.add(button1);
+		panel.add(button2);
+		panel.add(button3);
+		panel.add(btnSum);
+		
+		JButton button0 = new JButton("0");
+		button0.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (num2.equals("")){
+					
+				} else {
+					escribir("0");
+				}
+			}
+		});
+		button0.setFont(new Font("SansSerif", Font.PLAIN, 34));
+		button0.setMargin(new Insets(2, 2, 2, 2));
+		button0.setBackground(new Color(220, 220, 220));
+		panel.add(button0);
+		
+		JButton btnPunto = new JButton(".");
+		btnPunto.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (num2.contains(".")){
+					
+				} else {
+					escribir(".");
+				}
+			}
+		});
+		btnPunto.setFont(new Font("SansSerif", Font.PLAIN, 34));
+		btnPunto.setMargin(new Insets(2, 2, 2, 2));
+		btnPunto.setBackground(new Color(220, 220, 220));
+		panel.add(btnPunto);
+		
+		JButton button = new JButton("");
+		button.setFont(new Font("SansSerif", Font.PLAIN, 34));
+		button.setMargin(new Insets(2, 2, 2, 2));
+		button.setBackground(new Color(220, 220, 220));
+		panel.add(button);
+		panel.add(btnIgual);
+		contentPane.setLayout(gl_contentPane);
+	}
+}

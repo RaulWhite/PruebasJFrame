@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<section name="org.eclipse.wb.internal.swing.model.property.editor.border.BorderDialog">
-		<item value="405" key="height"/>
-		<item value="541" key="width"/>
-		<item value="364" key="y"/>
-		<item value="725" key="x"/>
-	</section>
-	<section name="org.eclipse.wb.internal.swing.model.property.editor.icon.IconPropertyEditor$ImageDialog">
-		<item value="628" key="height"/>
-		<item value="997" key="width"/>
-		<item value="252" key="y"/>
-		<item value="494" key="x"/>
-	</section>
 	<section name="org.eclipse.wb.internal.swing.model.property.editor.font.FontDialog">
-		<item value="508" key="height"/>
-		<item value="486" key="width"/>
-		<item value="312" key="y"/>
-		<item value="749" key="x"/>
+		<item value="506" key="width"/>
+		<item value="264" key="x"/>
+		<item value="338" key="y"/>
+		<item value="533" key="height"/>
+	</section>
+	<section name="org.eclipse.wb.internal.swing.model.property.editor.border.BorderDialog">
+		<item value="541" key="width"/>
+		<item value="725" key="x"/>
+		<item value="364" key="y"/>
+		<item value="405" key="height"/>
 	</section>
 	<section name="org.eclipse.wb.internal.swing.model.property.editor.icon.ImagePropertyEditor$ImageDialog">
-		<item value="599" key="height"/>
 		<item value="997" key="width"/>
-		<item value="266" key="y"/>
 		<item value="494" key="x"/>
+		<item value="266" key="y"/>
+		<item value="599" key="height"/>
+	</section>
+	<section name="org.eclipse.wb.internal.swing.model.property.editor.icon.IconPropertyEditor$ImageDialog">
+		<item value="997" key="width"/>
+		<item value="503" key="x"/>
+		<item value="252" key="y"/>
+		<item value="628" key="height"/>
 	</section>
 </section>

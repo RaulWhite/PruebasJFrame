@@ -3,4 +3,8 @@
 	<moveCategory
 		id="org.eclipse.wb.swing.BoxLayout"
 		nextCategory="org.eclipse.wb.swing.BoxLayout"/>
+	<moveEntry
+		id="org.eclipse.wb.swing.components javax.swing.JButton"
+		category="org.eclipse.wb.swing.components"
+		nextEntry="org.eclipse.wb.swing.components javax.swing.JToggleButton"/>
 </commands>
